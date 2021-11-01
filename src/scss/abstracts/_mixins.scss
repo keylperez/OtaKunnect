@@ -1,0 +1,24 @@
+@mixin grid($column: 5, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  gap: $gap;
+}
+
+%txtbox {
+  border: 1px solid $color-secondary-dark;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+@mixin hover($bg: $color-tertiary, $border: $color-text, $color: $color-text) {
+  background-color: $bg !important;
+  color: $color !important;
+  transition: 0.3s;
+  border: 1px solid $border !important;
+}
+
+@mixin flex($flex: auto) {
+  display: flex;
+  justify-content: $flex;
+  flex-wrap: nowrap;
+}

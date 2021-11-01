@@ -1,0 +1,15 @@
+.btn {
+  &-login {
+    // margin: 20px 0 10px 0;
+    border-radius: 5px;
+    width: 49%;
+    height: 40px;
+    background-color: $color-secondary !important;
+    color: $color-text !important;
+    font-size: 2rem !important;
+    transition: 0.3s;
+    &:hover {
+      @include hover($color-tertiary, $color-text);
+    }
+  }
+}

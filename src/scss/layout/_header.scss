@@ -1,0 +1,35 @@
+.body {
+  &-login {
+    overflow-x: hidden;
+  }
+}
+
+.header {
+  &-login {
+    margin-top: 100px;
+    // height: 100%;
+    overflow-x: hidden;
+    @include grid(3, 20px);
+
+    &-about {
+      padding-right: 200px;
+      grid-column: 2 / -1;
+      color: white;
+      @include fadeAnimation(50%);
+      &:hover h4 {
+        transform: scale(1.1) translateX(4.5%);
+      }
+      h4 {
+        font-size: 6rem;
+        margin: 0 0 20px 0;
+        transition: 0.3s;
+      }
+    }
+
+    img {
+      position: fixed;
+      bottom: 0;
+      right: 0%;
+    }
+  }
+}

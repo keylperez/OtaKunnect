@@ -1,0 +1,53 @@
+@mixin fadeAnimation(
+  $percent: 50%,
+  $direction: horizontal,
+  $duration: 0.5s,
+  $delay: 0s,
+  $opacity: 1
+) {
+  @if $direction == horizontal {
+    @keyframes fadeInH {
+      0% {
+        // transparency: 0;
+        color: rgba($color-secondary-dark, 0);
+        transform: translateX($percent);
+        opacity: $opacity;
+      }
+      100% {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+    animation: $duration ease-in-out $delay 1 fadeInH;
+  }
+  @if $direction == vertical {
+    @keyframes fadeInV {
+      0% {
+        color: rgba($color-secondary-dark, 0);
+        transform: translateY($percent);
+        opacity: $opacity;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+    animation: $duration ease-in-out $delay 1 fadeInV;
+  }
+}
+
+@mixin popUp($opacity: 1) {
+  @keyframes popUp {
+    0% {
+      transform: scale(0.8);
+      opacity: $opacity;
+    }
+    67% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

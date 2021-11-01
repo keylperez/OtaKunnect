@@ -1,0 +1,67 @@
+#login {
+  background-color: $color-secondary;
+  border: 2px solid $color-secondary-light;
+  color: $color-text;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  align-self: start;
+  justify-self: center;
+  @include grid(2);
+
+  .form {
+    &-label {
+      grid-column: 1 / -1;
+      &-1 {
+        @include fadeAnimation(50%, horizontal, 0.5s, 0s);
+      }
+      &-2 {
+        @include fadeAnimation(50%, horizontal, 0.6s, 0s);
+      }
+      &-3 {
+        @include fadeAnimation(50%, horizontal, 0.7s, 0s);
+      }
+      &-4 {
+        @include fadeAnimation(50%, horizontal, 0.8s, 0s);
+      }
+      &-5 {
+        @include fadeAnimation(50%, horizontal, 0.9s, 0s);
+      }
+    }
+    &-control {
+      grid-column: 1 / -1;
+      background-color: $color-primary;
+      &:hover,
+      &:active {
+        @include hover;
+      }
+      &::placeholder:hover {
+        color: $color-text !important;
+      }
+    }
+  }
+
+  .btn {
+    width: 99%;
+    margin: 20px 0;
+    align-self: center;
+    border: 1px solid $color-tertiary;
+    &-1 {
+      justify-self: start;
+    }
+    &-2 {
+      justify-self: end;
+      font-size: 1.8rem !important;
+    }
+  }
+
+  input {
+    @extend %txtbox;
+    padding: 5px;
+    font-size: 1.75rem;
+    color: $color-text;
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
+}
