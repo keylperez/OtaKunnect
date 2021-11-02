@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +49,7 @@
                     <use xlink:href="src/font/sprites/solid.svg#user"></use>
                 </svg>
             </a>
-            <a href="src/php/pages/logout.php">
+            <a href="src/php/actions/sign_out.php">
                 <svg class="icon icon-logout">
                     <use xlink:href="src/font/sprites/solid.svg#sign-in-alt"></use>
                 </svg>
