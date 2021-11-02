@@ -8,7 +8,7 @@
     .widget {
       @include popUp(0);
       padding: 10px;
-      animation: 0.7s ease-in-out 0s 1 popUp;
+      animation: 450ms ease-in-out 0s 1 popUp;
     }
   }
 }

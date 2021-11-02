@@ -1,4 +1,4 @@
-#login {
+.form-login {
   background-color: $color-secondary;
   border: 2px solid $color-secondary-light;
   color: $color-text;
@@ -64,4 +64,8 @@
       color: $color-secondary;
     }
   }
+}
+
+.disable {
+  display: none;
 }
