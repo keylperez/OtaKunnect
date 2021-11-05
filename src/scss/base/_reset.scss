@@ -24,10 +24,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: overlay;
   font-family: $font-text;
   color: $color-text;
   font-weight: 300;
   font-size: 3em;
+  height: 100%;
 }
 
 h1,
@@ -39,4 +41,6 @@ h6 {
   font-size: 1.5em;
   font-family: $font-header;
   font-weight: 400;
+  color: $color-primary;
+  text-shadow: $color-tertiary 2px 2px;
 }

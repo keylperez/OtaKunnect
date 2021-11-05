@@ -4,8 +4,13 @@
   font-size: 4rem;
   @include grid(3);
   h1 {
-    @include fadeAnimation(25%, horizontal, 0.5s, 0s, 0);
+    @include fadeAnimation(25%, horizontal, 1s, 0s, 0);
     padding-left: 30px;
+    text-shadow: $color-tertiary 4px 4px;
+    transition: 0.3s;
+    &:hover {
+      font-size: 7rem;
+    }
   }
 
   &-sizing {
@@ -30,21 +35,21 @@
         transform: scale(1.2);
       }
       &-inbox {
-        @include fadeAnimation(1000%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(1000%, horizontal, 1s, 0s, 0);
       }
       &-heart {
-        @include fadeAnimation(150%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(150%, horizontal, 1s, 0s, 0);
       }
       &-search {
         width: 29px;
-        @include fadeAnimation(100%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(100%, horizontal, 1s, 0s, 0);
       }
       &-settings {
         width: 29px;
-        @include fadeAnimation(50%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(50%, horizontal, 1s, 0s, 0);
       }
       &-logout {
-        @include fadeAnimation(25%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(25%, horizontal, 1s, 0s, 0);
       }
     }
   }

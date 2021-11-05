@@ -22,10 +22,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: overlay;
   font-family: "Source Sans Pro", sans-serif;
   color: #d1d0c5;
   font-weight: 300;
-  font-size: 3em; }
+  font-size: 3em;
+  height: 100%; }
 
 h1,
 h2,
@@ -35,7 +37,9 @@ h5,
 h6 {
   font-size: 1.5em;
   font-family: "Oswald", sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #e2b714;
+  text-shadow: #ca4754 2px 2px; }
 
 .nav {
   display: flex;
@@ -59,61 +63,63 @@ h6 {
       background: #ca4754;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0; }
-    .nav-btn:hover:after {
-      content: "";
-      width: 100%;
-      left: 0; }
+    .nav-btn:hover {
+      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px; }
+      .nav-btn:hover:after {
+        content: "";
+        width: 100%;
+        left: 0; }
     .nav-btn-1 {
-      animation: 0.5s ease-in-out 0s 1 fadeInV; }
+      animation: 1s ease-in-out 0s 1 fadeInV; }
 
 @keyframes fadeInV {
   0% {
     color: rgba(26, 27, 28, 0);
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
     .nav-btn-2 {
-      animation: 0.6s ease-in-out 0s 1 fadeInV; }
+      animation: 1.1s ease-in-out 0s 1 fadeInV; }
 
 @keyframes fadeInV {
   0% {
     color: rgba(26, 27, 28, 0);
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
     .nav-btn-3 {
-      animation: 0.7s ease-in-out 0s 1 fadeInV; }
+      animation: 1.2s ease-in-out 0s 1 fadeInV; }
 
 @keyframes fadeInV {
   0% {
     color: rgba(26, 27, 28, 0);
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
     .nav-btn-4 {
-      animation: 0.8s ease-in-out 0s 1 fadeInV; }
+      animation: 1.3s ease-in-out 0s 1 fadeInV; }
 
 @keyframes fadeInV {
   0% {
     color: rgba(26, 27, 28, 0);
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0; }
   100% {
     transform: translateY(0%);
     opacity: 1; } }
     .nav-btn-5 {
-      animation: 0.9s ease-in-out 0s 1 fadeInV; }
+      animation: 1.4s ease-in-out 0s 1 fadeInV; }
 
 @keyframes fadeInV {
   0% {
     color: rgba(26, 27, 28, 0);
-    transform: translateY(50%);
+    transform: translateY(100%);
     opacity: 0; }
   100% {
     transform: translateY(0%);
@@ -122,13 +128,13 @@ h6 {
 .body-login {
   overflow-x: hidden; }
 
-.header-login {
+.main-login {
   margin-top: 100px;
   overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px; }
-  .header-login-about {
+  .main-login-about {
     padding-right: 200px;
     grid-column: 2 / -1;
     color: white;
@@ -142,16 +148,18 @@ h6 {
   100% {
     transform: translateX(0%);
     opacity: 1; } }
-    .header-login-about:hover h4 {
+    .main-login-about:hover h4 {
       transform: scale(1.1) translateX(4.5%); }
-    .header-login-about h4 {
+    .main-login-about h4 {
       font-size: 6rem;
       margin: 0 0 20px 0;
+      color: #e2b714;
+      text-shadow: #d1d0c5 3px 3px;
       transition: 0.3s; }
-      .header-login-about h4 .realistic-marker-highlight {
+      .main-login-about h4 .realistic-marker-highlight {
         position: relative;
         padding-right: 0.3em; }
-        .header-login-about h4 .realistic-marker-highlight:before {
+        .main-login-about h4 .realistic-marker-highlight:before {
           content: "";
           background-color: #ca4754;
           width: 100%;
@@ -162,9 +170,9 @@ h6 {
           left: -0.25em;
           top: 0.1em;
           padding: 0 0.25em; }
-    .header-login-about mark {
+    .main-login-about mark {
       background-color: #f6e399; }
-  .header-login img {
+  .main-login img {
     position: fixed;
     bottom: 0;
     right: 0%; }
@@ -186,6 +194,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0; }
+  .form-login h2 {
+    color: #e2b714;
+    text-shadow: #ca4754 2px 2px; }
   .form-login .form-label {
     grid-column: 1 / -1; }
     .form-login .form-label-1 {
@@ -245,14 +256,17 @@ footer {
     opacity: 1; } }
   .form-login .form-control {
     grid-column: 1 / -1;
-    background-color: #e2b714; }
-    .form-login .form-control:hover, .form-login .form-control:active {
+    background-color: #e2b714;
+    color: black; }
+    .form-login .form-control:hover, .form-login .form-control:focus {
       background-color: #ca4754 !important;
       color: #d1d0c5 !important;
       transition: 0.3s;
       border: 1px solid #d1d0c5 !important; }
     .form-login .form-control::placeholder:hover {
       color: #d1d0c5 !important; }
+  .form-login span {
+    grid-column: 1 / -1; }
   .form-login .btn {
     width: 99%;
     margin: 20px 0;
@@ -295,8 +309,10 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   gap: 0; }
   .page-header h1 {
-    animation: 0.5s ease-in-out 0s 1 fadeInH;
-    padding-left: 30px; }
+    animation: 1s ease-in-out 0s 1 fadeInH;
+    padding-left: 30px;
+    text-shadow: #ca4754 4px 4px;
+    transition: 0.3s; }
 
 @keyframes fadeInH {
   0% {
@@ -306,6 +322,8 @@ footer {
   100% {
     transform: translateX(0%);
     opacity: 1; } }
+    .page-header h1:hover {
+      font-size: 7rem; }
   .page-header-sizing {
     padding: 10px; }
   .page-header .actions {
@@ -325,7 +343,7 @@ footer {
       .page-header .actions .icon:hover {
         transform: scale(1.2); }
       .page-header .actions .icon-inbox {
-        animation: 0.5s ease-in-out 0s 1 fadeInH; }
+        animation: 1s ease-in-out 0s 1 fadeInH; }
 
 @keyframes fadeInH {
   0% {
@@ -336,7 +354,7 @@ footer {
     transform: translateX(0%);
     opacity: 1; } }
       .page-header .actions .icon-heart {
-        animation: 0.5s ease-in-out 0s 1 fadeInH; }
+        animation: 1s ease-in-out 0s 1 fadeInH; }
 
 @keyframes fadeInH {
   0% {
@@ -348,7 +366,7 @@ footer {
     opacity: 1; } }
       .page-header .actions .icon-search {
         width: 29px;
-        animation: 0.5s ease-in-out 0s 1 fadeInH; }
+        animation: 1s ease-in-out 0s 1 fadeInH; }
 
 @keyframes fadeInH {
   0% {
@@ -360,7 +378,7 @@ footer {
     opacity: 1; } }
       .page-header .actions .icon-settings {
         width: 29px;
-        animation: 0.5s ease-in-out 0s 1 fadeInH; }
+        animation: 1s ease-in-out 0s 1 fadeInH; }
 
 @keyframes fadeInH {
   0% {
@@ -371,7 +389,7 @@ footer {
     transform: translateX(0%);
     opacity: 1; } }
       .page-header .actions .icon-logout {
-        animation: 0.5s ease-in-out 0s 1 fadeInH; }
+        animation: 1s ease-in-out 0s 1 fadeInH; }
 
 @keyframes fadeInH {
   0% {
@@ -382,40 +400,31 @@ footer {
     transform: translateX(0%);
     opacity: 1; } }
 
-.announcements {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-  color: #d1d0c5;
-  background-color: #323437;
-  border: 5px solid #ca4754;
-  border-radius: 3rem; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  position: absolute; }
 
-.popular-items, .popular-stores {
-  grid-column: 3 / 8;
-  background-color: rgba(50, 52, 55, 0.5); }
+::-webkit-scrollbar-thumb {
+  background: #ca4754;
+  background: rgba(202, 71, 84, 0);
+  border-radius: 9px;
+  transition: 1s; }
 
-.header-home {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0;
-  grid-template-rows: repeat(2, 1fr);
-  padding: 20px;
-  gap: 20px;
-  height: 120vh; }
-  .header-home .widget {
-    padding: 10px;
-    animation: 450ms ease-in-out 0s 1 popUp; }
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 71, 84, 0.7);
+  transition: 1s; }
 
-@keyframes popUp {
-  0% {
-    transform: scale(0.3) translate3d(0, 0, 0);
-    opacity: 0; }
-  50% {
-    opacity: 1;
-    transform: scale(1.05); }
-  80% {
-    opacity: 1;
-    transform: scale(0.89); }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate3d(0, 0, 0); } }
+::-webkit-scrollbar-track {
+  border-radius: 9px;
+  background: none; }
+
+main {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+  height: 100vh; }
+
+.section {
+  background-color: #f6e399; }
+  .section-main {
+    grid-template-rows: repeat(2, 1fr);
+    padding: 20px; }

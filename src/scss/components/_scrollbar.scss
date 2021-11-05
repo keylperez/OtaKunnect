@@ -1,0 +1,21 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  position: absolute;
+  //   scroll-padding-top: 5px;
+  //   scroll-padding-right: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-tertiary;
+  background: rgba($color-tertiary, 0);
+  border-radius: 9px;
+  transition: 1s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color-tertiary, 0.7);
+  transition: 1s;
+}
+::-webkit-scrollbar-track {
+  border-radius: 9px;
+  background: none;
+}

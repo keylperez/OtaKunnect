@@ -4,7 +4,7 @@
   }
 }
 
-.header {
+.main {
   &-login {
     margin-top: 100px;
     // height: 100%;
@@ -22,6 +22,8 @@
       h4 {
         font-size: 6rem;
         margin: 0 0 20px 0;
+        color: $color-primary;
+        text-shadow: $color-text 3px 3px;
         transition: 0.3s;
         .realistic-marker-highlight {
           position: relative;

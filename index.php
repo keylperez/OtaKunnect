@@ -1,7 +1,9 @@
 <?php
 session_start();
-if(isset($_SESSION['username'])){
-    header("Location: main.php");
+include_once "src/php/actions/log_function.php";
+include_once "src/php/actions/db_connect.php";
+if (isset($_SESSION['username'])) {
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -20,12 +22,12 @@ if(isset($_SESSION['username'])){
 </head>
 
 <body class="body-login">
-    <nav class="page-header page-header-sizing">
+    <header class="page-header page-header-sizing">
         <h1>OtaKunnect</h1>
-    </nav>
-    <header class="header-login">
+    </header>
+    <main class="main-login">
         <?php include("src/php/layout/login_form.php"); ?>
-        <div class="header-login-about">
+        <div class="main-login-about">
             <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
                 <defs>
                     <filter id="marker-shape">
@@ -35,11 +37,11 @@ if(isset($_SESSION['username'])){
                 </defs>
             </svg>
             <h4><span class="realistic-marker-highlight">What are we?</span></h4>
-            <p><mark>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia doloribus consequatur quam molestias dolore officia quis reiciendis repellat debitis aut minima vero at, est fugit tempore impedit aperiam voluptatibus a, labore voluptate praesentium! Accusantium adipisci delectus odit, vero quos distinctio perspiciatis obcaecati nihil. Voluptates facilis totam impedit expedita reiciendis rerum, voluptatum perspiciatis laboriosam non illo rem deserunt obcaecati necessitatibus ut sit. Ab itaque magnam assumenda distinctio, delectus sed ullam cumque ad doloremque amet aliquam fugiat atque labore maiores tempore perspiciatis exercitationem! Temporibus non in illo laborum sint corrupti, repellendus inventore exercitationem labore quae, maiores eaque obcaecati velit aliquid voluptates ullam?</mark></p>
+            <p><mark>We are anime fans who do our best to bring each other a lot closer. Using our website, you can set up sale for all of your weeaboo goods with ease for any upcoming conventions. At the same time, you can purchase items in advance before the conventions begins; so, you can just simply pick up the goods once you reach the shop in the convention.</mark></p>
         </div>
         <img src="src/img/login/Group-of-Characters.png" alt="">
 
-    </header>
+    </main>
 
 </body>
 
