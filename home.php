@@ -2,6 +2,8 @@
 session_start();
 include "src/php/actions/check_session.php";
 include "src/php/actions/query_random_items.php";
+include "src/php/actions/query_preference.php";
+include "src/php/actions/query_preference_items.php";
 
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
@@ -63,7 +65,36 @@ if (!isset($_SESSION['username'])) {
             </div>
         </header>
         <section class="section-main">
-
+            <div>
+                <?php           
+                    $count = 0;
+                    $size = count($_SESSION['preference_items']);
+                    echo 'Prefered Items: <br>';
+                    while($count < $size){
+                        echo '<div style="display:inline-flex;">';
+                        echo '<img src="'.$_SESSION['preference_items'][$count][2].'" alt="" style="max-width:200px;">';
+                        echo '<h5 style="display:flexbox">'.$_SESSION['preference_items'][$count][1].'</h5><br>';
+                        echo '<h5 style="display:flexbox">'.$_SESSION['preference_items'][$count][3].'</h5>';
+                        echo '</div>';
+                        $count++;
+                    }
+                ?>
+            </div>
+            <div>
+                <?php           
+                    $count = 0;
+                    $size = count($_SESSION['random_items']);
+                    echo 'Display: <br>';
+                    while($count < $size){
+                        echo '<div style="display:inline-flex;">';
+                        echo '<img src="'.$_SESSION['random_items'][$count][2].'" alt="" style="max-width:200px;">';
+                        echo '<h5 style="display:flexbox">'.$_SESSION['random_items'][$count][1].'</h5><br>';
+                        echo '<h5 style="display:flexbox">'.$_SESSION['random_items'][$count][3].'</h5>';
+                        echo '</div>';
+                        $count++;
+                    }
+                ?>
+            </div>
         </section>
     </main>
     <section class="section section-home">

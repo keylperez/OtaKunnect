@@ -12,5 +12,4 @@ if(mysqli_num_rows($result)>0){
         array_push($_SESSION["store_items"],array($row["product_id"],$row["name"],$row["img"],$row["price"],$row["description"],$row["store_id"]));
     }
 }
-mysqli_close($conn);
 ?>

@@ -2,8 +2,6 @@
 session_start();
 include_once "src/php/actions/log_function.php";
 include_once "src/php/actions/db_connect.php";
-include_once "src/php/actions/query_preference.php";
-include_once "src/php/actions/query_preference_items.php";
 
 if (isset($_SESSION['username'])) {
     header("Location: index.php");
