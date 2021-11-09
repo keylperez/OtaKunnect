@@ -1,5 +1,8 @@
 <?php
 session_start();
+include "src/php/actions/check_session.php";
+include "src/php/actions/query_random_items.php";
+
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();

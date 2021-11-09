@@ -7,7 +7,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 	$uname = trim($_POST['username']);
 	$pass = trim($_POST['password']);
-	$query = "  SELECT user_id, username, name, email 
+	$query = "  SELECT user_id, username, name, email, auth_level, store_id 
                 FROM users
                 WHERE username = '$uname' AND password = '$pass'";
 
@@ -20,6 +20,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		$_SESSION['name'] = $row["name"];
 		$_SESSION['email'] = $row["email"];
 		$_SESSION['auth_level'] = $row["auth_level"];
+		$_SESSION['store_id'] = $row["store_id"];
 		sleep(3);
 		header("Location: ../../../home.php");
 		exit();
