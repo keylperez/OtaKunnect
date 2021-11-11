@@ -24,10 +24,10 @@
     <input type="password" name="password" id="sign-password" class="form-control" required autocomplete="on">
     <label for="sign-confirm-password" class="form-label form-label-5">Confirm Password</label>
     <input type="password" name="confirm-password" id="sign-confirm-password" class="form-control" required autocomplete="on">
-    <?php if (isset($_GET['error'])) { ?>
-        <span class="error"><?php echo $_GET['error']; ?></span>
+    <?php if (isset($_GET['success'])) { ?>
+        <span class="success"><?php echo $_GET['success']; ?></span>
     <?php } ?>
-    <input type="submit" value="Sign-in" name="signin" class="btn btn-login btn-1">
+    <input type="submit" value="Sign-up" name="signin" class="btn btn-login btn-1">
     <button type="button" onclick="viewLogin()" class="btn btn-login btn-2">Already have an account?</button>
 
 </form>

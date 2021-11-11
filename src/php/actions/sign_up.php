@@ -21,7 +21,7 @@ if ($_POST['password'] == $_POST['confirm-password']) {
 		mysqli_close($conn);
 		// echo '<h6>Account created successfully</h6>';
 		sleep(3);
-		header("Location: ../../../home.php");
+		header("Location: ../../../index.php?success=Created account successfully");
 		exit();
 	} else {
 		header("Location: ../../../index.php?error=Account already exists");
