@@ -26,6 +26,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: overlay;
+  overflow-x: hidden;
   font-family: $font-text;
   color: $color-text;
   font-weight: 300;

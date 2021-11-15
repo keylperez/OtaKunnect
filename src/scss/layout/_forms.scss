@@ -60,6 +60,9 @@
     margin: 20px 0;
     align-self: center;
     border: 1px solid $color-quarternary-dark;
+    &:hover {
+      @include hover($color-tertiary, $color-text);
+    }
     &-1 {
       justify-self: start;
     }

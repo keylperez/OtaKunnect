@@ -6,7 +6,7 @@
     border: none;
     font-size: 2rem;
     color: $color-quarternary;
-    height: 35px;
+    height: 25px;
     position: relative;
     transition: 0.3s;
 
@@ -23,7 +23,7 @@
       width: 0;
     }
     &:hover {
-      color: $color-primary;
+      // color: $color-primary;
       text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
       &:after {
         content: "";
