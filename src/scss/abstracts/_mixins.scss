@@ -10,7 +10,7 @@
   transition: 0.4s;
 }
 
-@mixin hover($bg: $color-tertiary, $border: $color-text, $color: $color-text) {
+@mixin hover($bg: $color-quinary, $border: $color-text, $color: $color-text) {
   background-color: $bg !important;
   color: $color !important;
   transition: 0.3s;

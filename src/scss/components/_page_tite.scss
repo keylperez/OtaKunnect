@@ -1,11 +1,19 @@
 .page-header {
-  background-color: $color-secondary;
+  background-color: $color-secondary-light;
   color: $color-primary;
   font-size: 4rem;
+
+  a {
+    // height: 35px;
+    text-decoration: none;
+  }
   @include grid(3);
   h1 {
-    @include fadeAnimation(25%, horizontal, 0.5s, 0s, 0);
+    @include fadeAnimation(25%, horizontal, 1s, 0s, 0);
     padding-left: 30px;
+    text-shadow: $color-quinary 2px 2px;
+    transition: 0.3s;
+    font-size: 5rem;
   }
 
   &-sizing {
@@ -15,36 +23,31 @@
     align-items: center;
     @include flex(flex-end);
     padding-right: 20px;
-
-    a {
-      // height: 35px;
-      text-decoration: none;
-    }
     .icon {
-      fill: $color-tertiary;
-      width: 35px;
-      height: 35px;
-      margin-right: 15px;
+      fill: $color-quinary;
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
       transition: 0.2s;
       &:hover {
         transform: scale(1.2);
       }
       &-inbox {
-        @include fadeAnimation(1000%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(1000%, horizontal, 1s, 0s, 0);
       }
       &-heart {
-        @include fadeAnimation(150%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(150%, horizontal, 1s, 0s, 0);
       }
       &-search {
         width: 29px;
-        @include fadeAnimation(100%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(100%, horizontal, 1s, 0s, 0);
       }
       &-settings {
         width: 29px;
-        @include fadeAnimation(50%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(50%, horizontal, 1s, 0s, 0);
       }
       &-logout {
-        @include fadeAnimation(25%, horizontal, 0.5s, 0s, 0);
+        @include fadeAnimation(25%, horizontal, 1s, 0s, 0);
       }
     }
   }
