@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once "db_connect.php";
+include_once "log_function.php";
 
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -22,7 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 		$_SESSION['auth_level'] = $row["auth_level"];
 		$_SESSION['store_id'] = $row["store_id"];
 		sleep(3);
-		header("Location: ../../../home.php");
+		header("Location: ../pages/home.php");
 		exit();
 	} else {
 		header("Location: ../../../index.php?error=Incorect Username or password");

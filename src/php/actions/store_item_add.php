@@ -28,6 +28,5 @@ $insert_to_product = "INSERT INTO product(name, img, price, description, anime_i
                     VALUES('$name','$target_main_dir','$price','$desc','$anime','$category','$store_id');";
 mysqli_query($conn, $insert);
 mysqli_close($conn);
-//header("Location: ../../../home.php");
+//header("Location: ../pages/home.php");
 exit();
-?>

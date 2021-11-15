@@ -4,7 +4,7 @@ include_once "src/php/actions/log_function.php";
 include_once "src/php/actions/db_connect.php";
 
 if (isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: ./src/php/pages/home.php");
     exit();
 }
 ?>

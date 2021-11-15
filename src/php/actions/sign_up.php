@@ -22,6 +22,8 @@ if ($_POST['password'] == $_POST['confirm-password']) {
 		// echo '<h6>Account created successfully</h6>';
 		sleep(3);
 		header("Location: ../../../index.php?success=Created account successfully");
+		// sleep(3);
+		// header("Location: ../pages/home.php");
 		exit();
 	} else {
 		header("Location: ../../../index.php?error=Account already exists");

@@ -17,6 +17,5 @@ $delete = " UPDATE product
             WHERE product_id='$product_id' AND store_id='$store_id'";
 mysqli_query($conn, $insert);
 mysqli_close($conn);
-//header("Location: ../../../home.php");
+//header("Location: ../pages/home.php");
 exit();
-?>

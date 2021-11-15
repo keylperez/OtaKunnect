@@ -111,7 +111,7 @@ CREATE TABLE `preference` (
 INSERT INTO `preference` (`preference_id`, `user_id`, `anime_id`, `category_id`) VALUES
 (4, 2, 8, NULL),
 (5, 2, 11, NULL),
-(6, 2, NULL, 4),
+(6, 2, 4, NULL),
 (7, 3, 1, NULL);
 
 -- --------------------------------------------------------
@@ -137,19 +137,19 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `name`, `img`, `price`, `description`, `category_id`, `anime_id`, `store_id`, `deleted`) VALUES
-(2, 'Klee\'s Jumpty Dumpty', 'src/img/stores/KleeJumptyDumty.jpg', '850.00', NULL, NULL, 11, 1, 'Not deleted'),
-(3, 'Genshin Key Chains', 'src/img/stores/genshinKeyChains.jpg', '500.00', NULL, 5, 11, 1, 'Not deleted'),
-(4, 'Genshin Pins', 'src/img/stores/genshinPins.jpg', '500.00', NULL, 4, 11, 1, 'Not deleted'),
-(5, 'Love is War - Chika Fugiwara Figurine', 'src/img/stores/chikakaguyasama.jpg', '1200.00', NULL, 7, 1, 2, 'Not deleted'),
-(6, 'Darling in the Franxx - Ichigo Poster', 'src/img/stores/darlinginthefranxxposter.jpg', '1399.90', NULL, 6, 8, 1, 'Not deleted'),
-(7, 'Darling in the Franxx - Zero Two Poster', 'src/img/stores/cyberzerotwo.jpg', '1249.90', NULL, 6, 8, 1, 'Not deleted'),
-(8, 'Darling in the Franxx Poster', 'src/img/stores/zerotwoposter.jpg', '1129.90', NULL, 6, 8, 1, 'Not deleted'),
-(9, 'Horimiya - Couple', 'src/img/stores/horimiyaposterkyahhh.jpg', '849.90', NULL, 6, 6, 1, 'Not deleted'),
-(10, 'Horimiya - Enclosed', 'src/img/stores/horimiyaposter.png', '999.50', NULL, 6, 6, 1, 'Not deleted'),
-(11, 'Love is War - Chika Phone Case', 'src/img/stores/chikaphonecase.jpg', '500.00', NULL, 8, 1, 2, 'Not deleted'),
-(12, 'Love is War - Main Cast Poster', 'src/img/stores/kaguyaposter.jpg', '750.00', NULL, 6, 1, 2, 'Not deleted'),
-(13, 'Love is War - Kaguya Phone Case', 'src/img/stores/kaguyaphonecase.jpg', '500.00', NULL, 8, 1, 2, 'Not deleted'),
-(14, 'My Hero Academia - Hawks Poster', 'src/img/stores/mhaposter.jpg', '950.90', NULL, 6, 3, 1, 'Not deleted'),
+(2, 'Klee\'s Jumpty Dumpty', ' ../../img/stores/KleeJumptyDumty.jpg', '850.00', NULL, NULL, 11, 1, 'Not deleted'),
+(3, 'Genshin Key Chains', ' ../../img/stores/genshinKeyChains.jpg', '500.00', NULL, 5, 11, 1, 'Not deleted'),
+(4, 'Genshin Pins', ' ../../img/stores/genshinPins.jpg', '500.00', NULL, 4, 11, 1, 'Not deleted'),
+(5, 'Love is War - Chika Fugiwara Figurine', ' ../../img/stores/chikakaguyasama.jpg', '1200.00', NULL, 7, 1, 2, 'Not deleted'),
+(6, 'Darling in the Franxx - Ichigo Poster', ' ../../img/stores/darlinginthefranxxposter.jpg', '1399.90', NULL, 6, 8, 1, 'Not deleted'),
+(7, 'Darling in the Franxx - Zero Two Poster', ' ../../img/stores/cyberzerotwo.jpg', '1249.90', NULL, 6, 8, 1, 'Not deleted'),
+(8, 'Darling in the Franxx Poster', ' ../../img/stores/zerotwoposter.jpg', '1129.90', NULL, 6, 8, 1, 'Not deleted'),
+(9, 'Horimiya - Couple', ' ../../img/stores/horimiyaposterkyahhh.jpg', '849.90', NULL, 6, 6, 1, 'Not deleted'),
+(10, 'Horimiya - Enclosed', ' ../../img/stores/horimiyaposter.png', '999.50', NULL, 6, 6, 1, 'Not deleted'),
+(11, 'Love is War - Chika Phone Case', ' ../../img/stores/chikaphonecase.jpg', '500.00', NULL, 8, 1, 2, 'Not deleted'),
+(12, 'Love is War - Main Cast Poster', ' ../../img/stores/kaguyaposter.jpg', '750.00', NULL, 6, 1, 2, 'Not deleted'),
+(13, 'Love is War - Kaguya Phone Case', ' ../../img/stores/kaguyaphonecase.jpg', '500.00', NULL, 8, 1, 2, 'Not deleted'),
+(14, 'My Hero Academia - Hawks Poster', ' ../../img/stores/mhaposter.jpg', '950.90', NULL, 6, 3, 1, 'Not deleted'),
 (15, 'Plus Ultra Phone Case', '', '490.49', NULL, 8, 3, 1, 'Not deleted');
 
 -- --------------------------------------------------------

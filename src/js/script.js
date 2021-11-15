@@ -19,3 +19,4 @@ function viewLogin(){
     
     display = !display;
 }
+

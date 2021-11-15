@@ -4,10 +4,11 @@
   &-btn {
     background: none;
     border: none;
-    font-size: 2.5rem;
-    color: $color-text;
+    font-size: 2rem;
+    color: $color-quarternary;
     height: 35px;
     position: relative;
+    transition: 0.3s;
 
     &:after {
       // background: none repeat scroll 0 0 transparent;
@@ -17,12 +18,13 @@
       height: 2px;
       left: 50%;
       position: absolute;
-      background: $color-tertiary;
+      background: $color-primary;
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
     &:hover {
-      text-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px;
+      color: $color-primary;
+      text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 5px;
       &:after {
         content: "";
         width: 100%;
