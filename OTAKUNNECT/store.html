@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otakunnect</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        li,
+        a,
+        p,
+        legend,
+        label,
+        input,
+        option {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(BGWallpaper.jpg);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10%;
+        }
+
+        .bg {
+            background-image: url(OtakuWallpaper.jpg);
+            background-color: rgba(255, 255, 255, 0.3);
+            background-blend-mode: lighten;
+        }
+
+        footer {
+            text-align: center;
+            color: black;
+            padding: 6px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-image: url(OtakuWallpaper.jpg);
+            background-color: rgba(255, 255, 255, 0.3);
+            background-blend-mode: lighten;
+        }
+
+        .logo img {
+            width: 70%;
+        }
+
+        .ulist {
+            list-style: none;
+        }
+
+        .ulist li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .ulist li a:hover {
+            color: orangered;
+        }
+
+        .detail {
+            /* background-color: green; */
+            width: 90%;
+            height: 70px;
+            float: right;
+        }
+
+        .dlist {
+            padding-top: 25px;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .dlist li {
+            display: inline-block;
+        }
+
+        .dlist li a:hover {
+            color: orangered;
+        }
+
+        .imgban {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .profpic {
+            /* background-color: blue; */
+            width: 20%;
+            float: left;
+            position: absolute;
+            top: 20%;
+        }
+
+        .pic {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: white 7px solid;
+            overflow: hidden;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .clr {
+            clear: both;
+        }
+
+        legend {
+            font-size: 1.7em;
+        }
+
+        .filter {
+            /* background-color: violet; */
+            width: 20%;
+            float: left;
+        }
+
+        fieldset {
+            width: 90%;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .product {
+            /* background-color: red; */
+            float: right;
+            width: 80%;
+        }
+
+        input[type=submit]{
+            background-color: #FBFF4D;
+            border: none;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /* 
+        .prod {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- HEADER PART OF THE WEBSITE -->
+    <div class="bg">
+        <header>
+            <a href="#" class="logo"><img src="logo.png" alt="logo"></a>
+            <nav>
+                <ul class="ulist">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Anime</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="banner">
+            <img class="imgban" src="otakubanner.png" alt="banner">
+        </div>
+
+        <div class="profpic">
+            <img class="pic" src="defpic.png" alt="Profile Pic">
+        </div>
+
+        <div class="detail">
+            <ul class="dlist">
+                <li><b>Store Owner: </b>INSERT NAME HERE</li>
+                <li><b>Item Genres: </b>INSERT GENRE/S HERE</li>
+                <li><b>Number Of Items: </b>99</li>
+            </ul>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <br>
+
+    <!-- THE FILTER AND THE PRODUCT PICTURES -->
+    <div class="filter">
+        <form action="" method="get">
+            <fieldset>
+                <legend><b>Page Filter</b></legend><br>
+
+                <label for="genre">Genre:</label><br>
+                <select id="genre" name="genre">
+                    <option value="default">-------</option>
+                    <!-- YOU CAN EITHER ADD OPTIONS OF THE GENRES FOUND ONLY IN THE STORE OWNER'S DATABASE IN REPEAT
+                            OR YOU INPUT THE OPTIONS YOURSELF -->
+                </select><br><br>
+
+                <label for="preferences">Preferences:</label><br>
+                <select id="preferences" name="preferences">
+                    <option value="default">-------</option>
+                </select><br><br>
+
+                <label for="prodtype">Product Type:</label><br>
+                <select id="prodtype" name="prodtype">
+                    <option value="default">-------</option>
+                </select><br><br>
+
+                <center><input type="submit" value="Filter"></center>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="product">
+        <br><br><br><br>
+    </div>
+
+
+    <!-- <footer>
+        <p>© 2021 Otakunnect. All rights reserved</p>
+    </footer> -->
+</body>
+
+</html>
